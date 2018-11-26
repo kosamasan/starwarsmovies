@@ -1,0 +1,36 @@
+.moviesList ul {
+  list-style-type: none;
+  border-right: 2px solid #f5f5f5;
+  padding-inline-start: 0px;
+}
+
+.moviesList li {
+  /* margin: 20px 0 20px; */
+  text-align: left;
+  padding: 15px 0 15px;
+  border-bottom: 2px solid #f5f5f5
+}
+
+.moviesList li:hover {
+  cursor: pointer;
+  background-color: #ddd
+}
+
+.moviesList div {
+  float: left;
+}
+
+.episode {
+  color: #888888;
+  text-align: left
+}
+
+.title {
+  font-weight: 500;
+  color: #555;
+  font-size: 13px
+}
+
+.date {
+  color: #555
+}
