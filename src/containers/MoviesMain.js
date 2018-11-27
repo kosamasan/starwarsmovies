@@ -39,7 +39,7 @@ export class MoviesMain extends Component {
   }
 
   sortBy = (param) => {
-    const myData = [].concat(this.props.moviesFiltered);
+    let myData = [].concat(this.props.moviesFiltered);
     if (param==='episode') {
       myData.sort(function(a, b) {
         return a.episode_id - b.episode_id;
@@ -61,21 +61,21 @@ export class MoviesMain extends Component {
 
   render() {
     let output = <div>
-    <div className="row">
-      {/* Create sortComponent which emits sort type onClick sort option */}
-      <Sorting sortBy={this.sortBy}/>
-      {/* Create searchComponent which emits typed value on keypress */}
-      <Search filterList={this.filterList} />
-    </div>
-    <div className="row">
-      <div className="col-md-7">
-        <MoviesList movies={this.props.moviesFiltered} movieSelection={this.movieSelection}/>
+      <div className="row">
+        {/* Create sortComponent which emits sort type onClick sort option */}
+        <Sorting sortBy={this.sortBy}/>
+        {/* Create searchComponent which emits typed value on keypress */}
+        <Search filterList={this.filterList} />
       </div>
-      <div className="col-md-5">
-        <MovieDetails details={this.props.details}/>
+      <div className="row">
+        <div className="col-md-7">
+          <MoviesList movies={this.props.moviesFiltered} movieSelection={this.movieSelection}/>
+        </div>
+        <div className="col-md-5">
+          <MovieDetails details={this.props.details}/>
+        </div>
       </div>
-    </div>
-  </div>;
+    </div>;
     if (this.state.loading) {
       output = <Spinner />
     }

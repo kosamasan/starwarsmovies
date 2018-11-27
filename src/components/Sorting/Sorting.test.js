@@ -18,12 +18,3 @@ describe('Sorting', () => {
     expect(wrapper.find('.dropdown-content p')).toHaveLength(2);
   });
 });
-
-// describe('Sorting', () => {
-//   it('should have exactly 2 items in the dropdown', () => {
-//     const wrapper = shallow(<Sorting sortBy />);
-//     const button = findByTestAttr(wrapper, 'episodeButton');
-//     button.simulate('click');
-//     // expect(wrapper.find('.dropdown-content p')).toHaveLength(2);
-//   });
-// });

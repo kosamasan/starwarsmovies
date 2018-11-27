@@ -11,14 +11,14 @@ import Spinner from '../components/Spinner/Spinner';
 configure({adapter: new Adapter()});
 
 describe('MoviesMain', () => {
-  it('should render Spinner module if state.loading has its initial value', () => {
+  it('should render Spinner component if state.loading has its initial value', () => {
     const wrapper = shallow(<MoviesMain/>);
     expect(wrapper.find(Spinner)).toHaveLength(1);
   });
 });
 
 describe('MoviesMain', () => {
-  it('should render MoviesList module', () => {
+  it('should render MoviesList component when state.loading is set to false', () => {
     const wrapper = shallow(<MoviesMain/>);
     wrapper.setState({loading: false});
     expect(wrapper.find(MoviesList)).toHaveLength(1);
@@ -26,7 +26,7 @@ describe('MoviesMain', () => {
 });
 
 describe('MoviesMain', () => {
-  it('should render MovieDetails module', () => {
+  it('should render MovieDetails component when state.loading is set to false', () => {
     const wrapper = shallow(<MoviesMain/>);
     wrapper.setState({loading: false});
     expect(wrapper.find(MovieDetails)).toHaveLength(1);
@@ -34,7 +34,7 @@ describe('MoviesMain', () => {
 });
 
 describe('MoviesMain', () => {
-  it('should render Sorting module', () => {
+  it('should render Sorting component when state.loading is set to false', () => {
     const wrapper = shallow(<MoviesMain/>);
     wrapper.setState({loading: false});
     expect(wrapper.find(Sorting)).toHaveLength(1);
@@ -42,7 +42,7 @@ describe('MoviesMain', () => {
 });
 
 describe('MoviesMain', () => {
-  it('should render Search module', () => {
+  it('should render Search component when state.loading is set to false', () => {
     const wrapper = shallow(<MoviesMain/>);
     wrapper.setState({loading: false});
     expect(wrapper.find(Search)).toHaveLength(1);

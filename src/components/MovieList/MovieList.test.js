@@ -6,7 +6,7 @@ import MovieList from './MovieList';
 configure({adapter: new Adapter()});
 
 describe('MovieList', () => {
-  it('should render movie class if a movies is passed to MovieList', () => {
+  it('should render movie class if a movie is passed to MovieList', () => {
     const wrapper = shallow(<MovieList movies={[{episode_id:"1",
       title:"Return of the Jedi",
       release_date:"1980-05-17"}]}  movieSelection/>);
