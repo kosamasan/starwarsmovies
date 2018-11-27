@@ -39,7 +39,7 @@ export class MoviesMain extends Component {
   }
 
   sortBy = (param) => {
-    let myData = [].concat(this.props.moviesFiltered);
+    let myData = [...this.props.moviesFiltered];
     if (param==='episode') {
       myData.sort(function(a, b) {
         return a.episode_id - b.episode_id;
@@ -62,9 +62,7 @@ export class MoviesMain extends Component {
   render() {
     let output = <div>
       <div className="row">
-        {/* Create sortComponent which emits sort type onClick sort option */}
         <Sorting sortBy={this.sortBy}/>
-        {/* Create searchComponent which emits typed value on keypress */}
         <Search filterList={this.filterList} />
       </div>
       <div className="row">
